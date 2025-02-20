@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script language="javascript">
+  var titletext="B I T A C O R A # 1"
+  var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+  set=setTimeout;
+  var index=0;
+  function scrolltitle(){
+  if(index<=titletext.length){
+  document.title=titletext.substring(0,index);
+  index++;
+  set('scrolltitle()', 200);
+  }else{
+  index=0;
+  if(repeat)set('scrolltitle()',1000);
+  }}
+  window.onload=function(){
+  if(!document.layers)set('scrolltitle()',1000);
+  }
+
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cuadro">
+    <h1>Propiedad Classlist</h1>
+    <p>Es una herramienta muy útil para manipular las clases CSS de un elemento HTML de manera dinámica. Proporciona una interfaz sencilla y eficiente para agregar, eliminar, alternar y verificar clases en un elemento, lo que facilita la creación de efectos visuales y comportamientos interactivos en una página web.</p>
+
+    <h3>¿Qué es <i>classList?</i></h3>
+    <p><i>classList</i> es una propiedad de solo lectura que devuelve un objeto <i>DOMTokenList</i>. Este objeto representa la lista de clases CSS que tiene un elemento HTML en su atributo <i>class</i>. Puedes acceder a cada clase individual a través de este objeto y realizar diversas operaciones en ellas.</p>
+
+    <h3>Métodos de classList</h3>
+    <p>El objeto DOMTokenList que devuelve classList proporciona varios métodos útiles para trabajar con las clases CSS de un elemento:</p>
+    <ul>
+      <li><i>add(clase):</i>Agrega una clase CSS al elemento. Si la clase ya existe, este método no hace nada.</li>
+      <pre>
+        <code class="language-javascript line-numbers">
+          elemento.classList.add("nuevaClase");
+        </code>
+      </pre>
+      <li><i>remove(clase): </i> Elimina una clase CSS del elemento. Si la clase no existe, este método no hace nada.</li>
+      <pre>
+        <code class="language-javascript line-numbers">
+          elemento.classList.remove("claseExistente");
+        </code>
+      </pre>
+      <li><i>toggle(clase): </i> Alterna la presencia de una clase CSS en el elemento. Si la clase existe, la elimina; si no existe, la agrega. Este método también puede recibir un segundo argumento booleano opcional para forzar la adición o eliminación de la clase, independientemente de si ya existe o no.</li>
+      <pre>
+        <code class="language-javascript line-numbers">
+          elemento.classList.toggle("claseParaAlternar"); // Alterna la clase
+          elemento.classList.toggle("claseParaAgregar", true); // Fuerza la adición de la clase
+          elemento.classList.toggle("claseParaEliminar", false); // Fuerza la eliminación de la clase
+        </code>
+      </pre>
+      <li><i>contains(clase)</i>Verifica si el elemento tiene una clase CSS específica. Devuelve <i>true</i> si la clase existe y <i>false</i> si no.</li>
+      <pre>
+        <code class="language-javascript line-numbers">
+          if (elemento.classList.contains("claseBuscada")) {
+            // La clase está presente
+          } else {
+            // La clase no está presente
+          }
+        </code>
+      </pre>
+      <li><i>replace(claseAntigua, claseNueva)</i>Reemplaza una clase CSS existente por una nueva.</li>
+      <pre>
+        <code class="language-javascript line-numbers">
+          elemento.classList.replace("claseExistente", "nuevaClase");
+        </code>
+      </pre>
+    </ul>
+
+    <h3>Ventajas de usar <i>classlist</i></h3>
+    <ul>
+      <li><b>Sintaxis más clara y concisa:</b>classList proporciona una forma más legible y fácil de usar para manipular clases CSS en comparación con la manipulación directa del atributo <i>className</i>.</li>
+      <li><b>Mayor eficiencia</b> Está optimizado para realizar operaciones en clases CSS de manera eficiente, lo que puede mejorar el rendimiento de tu página web.</li>
+      <li><b>Mayor flexibilidad</b> Permite realizar múltiples operaciones en clases CSS de forma sencilla, como agregar y eliminar clases simultáneamente.</li>
+      <li><b>Compatibilidad</b>Es compatible con la mayoría de los navegadores modernos.</li>
+    </ul>
+
+    
+  </section>
+   
+
+   <script src="script.js"></script>
+
+</body>
+</html>

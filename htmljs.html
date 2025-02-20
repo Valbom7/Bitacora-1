@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script language="javascript">
+  var titletext="B I T A C O R A # 1"
+  var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+  set=setTimeout;
+  var index=0;
+  function scrolltitle(){
+  if(index<=titletext.length){
+  document.title=titletext.substring(0,index);
+  index++;
+  set('scrolltitle()', 200);
+  }else{
+  index=0;
+  if(repeat)set('scrolltitle()',1000);
+  }}
+  window.onload=function(){
+  if(!document.layers)set('scrolltitle()',1000);
+  }
+
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cuadro">
+    <h1>Encontrar HTML en JavaScript</h1>
+    <p>Se puede encontrar elementos HTML y manipularlos utilizando el Document Object Model (DOM), donde cada elemento HTML se convierte en un nodo en el árbol. JavaScript permite acceder a estos nodos y realizar diversas operaciones en ellos. </p>
+
+    <h3>getElementById()</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            const elemento = document.getElementById("miElemento");
+        </code>
+      </pre>
+    <p>Este método se utiliza para encontrar un elemento HTML específico que tiene un atributo id único. </p>
+
+    
+    <h3>getElementsByClassName(clase)</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            const elementos = document.getElementsByClassName("miClase");
+        </code>
+      </pre>
+    <p> Devuelve una colección de todos los elementos con una clase CSS específica.</p>
+
+    <h3>getElementsByTagName(etiqueta)</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            const elementos = document.getElementsByTagName("p");
+        </code>
+      </pre>
+    <p> Devuelve una colección de todos los elementos con una etiqueta HTML específica (por ejemplo, p, div, span, etc.)</p>
+
+    <h3>querySelector(selector)</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            const elemento = document.querySelector("#miElemento"); 
+        </code>
+      </pre>
+    <p>Encuentra el primer elemento que coincide con un selector CSS (como #id, .clase, p, etc.).</p>
+
+    <h3>querySelectorAll(selector)</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            const elementos = document.querySelectorAll("p");
+        </code>
+      </pre>
+    <p>Devuelve una colección de todos los elementos que coinciden con un selector CSS.</p>
+
+    <h2>¿Qué hacer después de encontrar un elemento?</h2>
+    <p>Una vez que has encontrado un elemento, puedes realizar diversas acciones, como: </p>
+
+    <h3>Modificar su contenido:</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            elemento.textContent = "Nuevo texto";
+            elemento.innerHTML = "&lt;p>Nuevo párrafo&lt;/p>";
+        </code>
+      </pre>
+
+    <h3>Cambiar sus atributos:</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            elemento.setAttribute("href", "https://www.example.com");
+            elemento.style.backgroundColor = "red";
+        </code>
+      </pre>
+
+      <h3>Añadir o eliminar clases CSS:</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            elemento.classList.add("nuevaClase");
+            elemento.classList.remove("miClase");
+        </code>
+      </pre>
+
+      
+      <h3>Añadir o eliminar elementos dentro de él:</h3>
+    <pre>
+        <code class="language-javascript line-numbers">
+            const nuevoElemento = document.createElement("p");
+            elemento.appendChild(nuevoElemento);
+            elemento.removeChild(nuevoElemento);
+        </code>
+      </pre>
+
+
+  </section>
+   
+   <script src="script.js"></script>
+
+</body>
+</html>

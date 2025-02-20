@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script language="javascript">
+  var titletext="B I T A C O R A # 1"
+  var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+  set=setTimeout;
+  var index=0;
+  function scrolltitle(){
+  if(index<=titletext.length){
+  document.title=titletext.substring(0,index);
+  index++;
+  set('scrolltitle()', 200);
+  }else{
+  index=0;
+  if(repeat)set('scrolltitle()',1000);
+  }}
+  window.onload=function(){
+  if(!document.layers)set('scrolltitle()',1000);
+  }
+
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cuadro">
+    <h1>Propiedad Style</h1>
+    <p>La propiedad style en JavaScript es un objeto que permite acceder y modificar los estilos CSS de un elemento HTML directamente desde el código JavaScript. Es una herramienta poderosa para manipular la apariencia de los elementos de una página web de forma dinámica.</p>
+    
+    <h3>¿Cómo funciona? </h3>
+    <p>Cada elemento HTML en el DOM (Document Object Model) tiene una propiedad style que contiene un objeto CSSStyleDeclaration. Este objeto representa los estilos en línea aplicados al elemento. Puedes acceder a las propiedades CSS individuales a través de este objeto y modificarlas según sea necesario.</p>
+
+    <h3>Sintaxis</h3>
+    <p>La sintaxis para acceder y modificar estilos con la propiedad style es la siguiente:</p>
+    <pre>
+      <code class="language-javascript line-numbers">
+        elemento.style.propiedadCSS = "valor";
+      </code>
+    </pre>
+    <p>Donde:</p>
+    <ul>
+      <li><i>elemento </i>es una referencia al elemento HTML cuyo estilo se va a modificar.</li>
+      <li><i>propiedadCSS</i> es el nombre de la propiedad CSS que se va a modificar (en camelCase, por ejemplo, <i>backgroundColor</i> en lugar de <i>background-color</i>).</li>
+      <li><i>valor</i> es el nuevo valor que se va a asignar a la propiedad CSS.</li>
+    </ul>
+
+    <h3>Ventajas de usar la propiedad style</h3>
+    <h4>Manipulación dinámica</h4>
+    <p> Permite cambiar los estilos de los elementos en tiempo real, lo que es útil para crear efectos interactivos y responder a eventos del usuario.</p>
+    <h4>Control preciso</h4>
+    <p>Permite modificar propiedades CSS individuales con gran precisión.</p>
+
+    <h3>Desventajas de usar la propiedad style</h3>
+    <h4>Estilos en línea</h4>
+    <p> Los estilos aplicados a través de la propiedad style se convierten en estilos en línea, lo que puede dificultar el mantenimiento del código CSS y la separación de la estructura HTML del estilo.</p>
+    <h4>Menos eficiente</h4>
+    <p>Modificar estilos con JavaScript puede ser menos eficiente que usar hojas de estilo CSS, especialmente cuando se realizan cambios complejos o se manipulan muchos elementos.</p>
+
+    <h3>Recomendaciones</h3>
+    <p>En general, es preferible utilizar hojas de estilo CSS para definir los estilos de una página web. La propiedad <i>style</i> debe utilizarse con moderación para realizar cambios dinámicos específicos que no se puedan lograr fácilmente con CSS.</p>
+    <p>Si necesitas realizar cambios complejos o manipular muchos elementos, considera utilizar bibliotecas o frameworks JavaScript que faciliten la gestión de estilos y la manipulación del DOM de manera más eficiente.</p>
+
+  </section>
+   
+
+   <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script language="javascript">
+  var titletext="B I T A C O R A # 1"
+  var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+  set=setTimeout;
+  var index=0;
+  function scrolltitle(){
+  if(index<=titletext.length){
+  document.title=titletext.substring(0,index);
+  index++;
+  set('scrolltitle()', 200);
+  }else{
+  index=0;
+  if(repeat)set('scrolltitle()',1000);
+  }}
+  window.onload=function(){
+  if(!document.layers)set('scrolltitle()',1000);
+  }
+
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cuadro">
+    <img class="imgg"src="m/c/2.gif" alt="DOM HTML">
+    <BR>
+   <h1>Document Object Model (DOM) HTML</h1>
+    <P>El DOM (Document Object Model) es una interfaz de programación que representa un documento HTML o XML como una estructura de árbol, donde cada elemento del documento se convierte en un nodo del árbol. Esta estructura permite a los programas acceder y manipular el contenido, la estructura y el estilo del documento de manera dinámica. </P>
+    <p>Es como un puente que conecta el código HTML de una página web con lenguajes de programación como JavaScript. Permite a JavaScript interactuar con los elementos HTML, modificarlos, añadir nuevos elementos y responder a eventos del usuario. </p>
+
+    <h3>Caracteristicas Principales</h3>
+        <ul>
+                <li><b>Estructura de árbol: </b>El DOM representa el documento HTML como un árbol jerárquico de nodos, donde cada nodo representa un elemento HTML, un atributo o un texto. </li>
+                <li><b>Acceso y manipulación: </b>El DOM proporciona métodos y propiedades para acceder y manipular los nodos del árbol, lo que permite a los programas cambiar el contenido, la estructura y el estilo del documento. </li>
+                <li><b>Interacción con JavaScript: </b> El DOM es la base para la interacción entre JavaScript y el HTML. JavaScript utiliza el DOM para acceder y manipular los elementos HTML, lo que permite crear páginas web dinámicas e interactivas. </li>
+        </ul>
+        <br>
+        <img class="imgg"src="m/c/3.png" alt="DOM HTML">
+
+    <h3>Ejemplo</h3>
+    <pre>
+        <code class="language-html line-numbers">
+          &lt;p&gt;Este es un párrafo.&lt;/p&gt;
+          &lt;button&gt;Haz clic aquí&lt;/button&gt;
+        </code>
+      </pre>
+    <p>El DOM representaría este documento como un árbol con nodos para el elemento p, el elemento button y el texto dentro del párrafo. JavaScript podría utilizar el DOM para acceder al nodo del párrafo y cambiar su contenido, o para añadir un evento al botón que se active cuando el usuario hace clic. </p>
+
+  </section>
+  
+   <script src="script.js"></script>
+
+</body>
+</html>

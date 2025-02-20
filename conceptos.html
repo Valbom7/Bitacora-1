@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script language="javascript">
+  var titletext="B I T A C O R A # 1"
+  var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+  set=setTimeout;
+  var index=0;
+  function scrolltitle(){
+  if(index<=titletext.length){
+  document.title=titletext.substring(0,index);
+  index++;
+  set('scrolltitle()', 200);
+  }else{
+  index=0;
+  if(repeat)set('scrolltitle()',1000);
+  }}
+  window.onload=function(){
+  if(!document.layers)set('scrolltitle()',1000);
+  }
+
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cuadro">
+    <img class="imgg"src="m/c/1.jpg" alt="Javascript">
+      <h1>Conceptos basicos de Javascript</h1>
+      <h3>Variables</h3>
+      <ul>
+        <li>Las variables son contenedores que almacenan datos. En JavaScript, se declaran con var, let o const. </li>
+        <li>var tiene un alcance global o de función, let tiene un alcance de bloque y const se utiliza para declarar constantes. </li>
+      </ul>
+
+      <h3>Tipos de datos</h3>
+      <ul>
+        <li><b>Primitivos:</b> number (números), string (cadenas de texto), boolean (verdadero o falso), null (valor nulo), undefined (variable no definida), symbol (símbolos únicos) y bigint (números enteros grandes). </li>
+        <li><b>Objeto:</b>  objetos (colecciones de propiedades). </li>
+      </ul>
+
+      <h3>Operadores</h3>
+      <P>Los operadores permiten realizar operaciones en los datos.</P>
+      <ul></ul>
+        <li><b>Aritméticos:</b> + (suma), - (resta), * (multiplicación), / (división), % (módulo). </li> 
+        <li><b>De asignación:</b> = (asignación), += (suma y asignación), -= (resta y asignación), etc.</li>
+        <li><b>De comparación:</b>== (igualdad), === (igualdad estricta), != (desigualdad), !== (desigualdad estricta), > (mayor que), < (menor que), >= (mayor o igual que), <= (menor o igual que)</li>
+        <li><b>Lógicos:</b>&& (AND), || (OR), ! (NOT). </li>
+
+      <h3>Estructuras de control</h3>
+      <p>Las estructuras de control permiten controlar el flujo de ejecución del código. Las más comunes son:</p>
+      <ul>
+        <li><B>Condicionales: </B>if, else if, else (ejecutan un bloque de código si se cumple una condición).</li>
+        <li><B>Bucles: </B> for (repite un bloque de código un número determinado de veces), while (repite un bloque de código mientras se cumple una condición), do...while (repite un bloque de código al menos una vez mientras se cumple una condición). </li>
+        <li><B>Switch: </B>permite evaluar una expresión y ejecutar un bloque de código correspondiente a un caso.</li>
+      </ul>
+
+      <h3>Funciones</h3>
+      <ul>
+        <li>Las funciones son bloques de código reutilizables que realizan una tarea específica. Se definen con la palabra clave function. </li>
+        <li>Pueden recibir parámetros y devolver valores. </li>
+      </ul>
+
+      <h3>Objetos</h3>
+      <ul>
+        <li>Los objetos son colecciones de propiedades, donde cada propiedad tiene un nombre y un valor. </li>
+        <li>Se pueden crear objetos literales ({}) o utilizando constructores (new Object()).  </li>
+      </ul>
+
+      <h3>Arrays</h3>
+      <ul>
+        <li>Los arrays son listas ordenadas de elementos. Se pueden crear con corchetes ([]).  </li>
+        <li>Los elementos de un array pueden ser de cualquier tipo de dato.  </li>
+      </ul>
+
+      <h3>Eventos</h3>
+      <ul>
+        <li>Los eventos son acciones que ocurren en el navegador, como clics del ratón, pulsaciones de teclas o carga de la página. </li>
+        <li>JavaScript puede escuchar eventos y ejecutar código en respuesta a ellos.</li>
+      </ul>
+
+      <h3>DOM (Document Object Model)</h3>
+      <p>El DOM es una representación en forma de árbol del documento HTML. JavaScript puede interactuar con el DOM para modificar el contenido y la estructura de la página web. </p>
+  </section>
+
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script language="javascript">
+  var titletext="B I T A C O R A # 1"
+  var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+  set=setTimeout;
+  var index=0;
+  function scrolltitle(){
+  if(index<=titletext.length){
+  document.title=titletext.substring(0,index);
+  index++;
+  set('scrolltitle()', 200);
+  }else{
+  index=0;
+  if(repeat)set('scrolltitle()',1000);
+  }}
+  window.onload=function(){
+  if(!document.layers)set('scrolltitle()',1000);
+  }
+
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cuadro">
+    <h1>Etiqueta Viewport</h1>
+    <p>La etiqueta <i>&lt;meta name="viewport"></i> es una etiqueta HTML que se utiliza para controlar cómo se escala y muestra una página web en diferentes dispositivos, especialmente en dispositivos móviles como smartphones y tablets.</p>
+
+    <h2>¿Por qué es importante la etiqueta viewport?</h2>
+    <p>En el pasado, las páginas web se diseñaban principalmente para ordenadores de escritorio. Cuando se visualizaban en dispositivos móviles con pantallas más pequeñas, el contenido a menudo se veía demasiado pequeño o se cortaba, lo que dificultaba la navegación y la lectura.</p>
+    <p>La etiqueta viewport permite a los desarrolladores web especificar cómo debe ajustarse el contenido de una página web al tamaño de la pantalla del dispositivo en el que se visualiza. Esto garantiza que la página se vea correctamente y sea fácil de usar en cualquier dispositivo.</p>
+
+    <h2>¿Cómo funciona la etiqueta viewport?</h2>
+    <p>La etiqueta viewport se coloca dentro de la sección <i>&lt;head> </i>de un documento HTML. Contiene atributos que definen cómo se debe escalar y mostrar la página.</p>
+
+    <p>El atributo más importante es <i>width</i>, que especifica el ancho del viewport. Se puede establecer en un valor específico en píxeles o en <i>device-width</i>, que indica que el ancho del viewport debe coincidir con el ancho de la pantalla del dispositivo.</p>
+
+    <p>Otro atributo importante es <i>initial-scale</i>, que define el nivel de zoom inicial de la página. Un valor de 1.0 indica que la página se mostrará sin ningún zoom.</p>
+
+    <h3>Ejemplo</h3>
+    <pre>
+      <code class="language-javascript line-numbers">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </code>
+    </pre>
+    <p>Esta etiqueta indica que el ancho del viewport debe coincidir con el ancho de la pantalla del dispositivo y que el nivel de zoom inicial debe ser 1.0.</p>
+    
+    <h2>Otros atributos de la etiqueta viewport</h2>
+    <p>Además de <i>width</i> e <i>initial-scale</i> , la etiqueta viewport también puede contener otros atributos, como:</p>
+
+    <ul>
+      <li><i>height</i>: Especifica la altura del viewport.</li>
+      <li><i>minimum-scale</i>: Define el nivel de zoom mínimo permitido.</li>
+      <li><i>maximum-scale</i>: Define el nivel de zoom máximo permitido.</li>
+      <li><i>user-scalable</i>: Indica si el usuario puede hacer zoom en la página.</li>
+    </ul>
+    <br>
+    <h4> La etiqueta viewport es una herramienta fundamental para crear páginas web responsive que se adapten a diferentes dispositivos y proporcionen una buena experiencia de usuario en cualquier pantalla.</h4>
+    
+  </section>
+   
+
+   <script src="script.js"></script>
+
+</body>
+</html>

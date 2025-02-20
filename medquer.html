@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script language="javascript">
+  var titletext="B I T A C O R A # 1"
+  var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+  set=setTimeout;
+  var index=0;
+  function scrolltitle(){
+  if(index<=titletext.length){
+  document.title=titletext.substring(0,index);
+  index++;
+  set('scrolltitle()', 200);
+  }else{
+  index=0;
+  if(repeat)set('scrolltitle()',1000);
+  }}
+  window.onload=function(){
+  if(!document.layers)set('scrolltitle()',1000);
+  }
+
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cuadro">
+    <img class="imgg" src="m/c/5.png" alt="Media Queries">
+    <h1>Media Queries</h1>
+    <p>Los <b>media queries</b> son una potente herramienta de CSS3 que permite a los desarrolladores web crear diseños adaptables que se ajustan a diferentes dispositivos y tamaños de pantalla.</p>
+
+    <p>Imagina que estás construyendo una casa. Quieres que se vea bien y sea funcional tanto para una persona que vive sola como para una familia de cinco. Las media queries son como tener un arquitecto que ajusta el diseño de la casa (el CSS) según quién la vaya a usar (el dispositivo).</p>
+
+    <h2>¿Cómo funcionan?</h2>
+    <p>Las media queries permiten aplicar estilos CSS específicos a un elemento HTML basándose en ciertas características del dispositivo o del navegador, como:</p>
+    <ul>
+      <li><b>Ancho y alto de la pantalla: </b>¿Es una pantalla grande de ordenador o un móvil pequeño?</li>
+      <li><b>Orientación: </b> ¿Está el dispositivo en vertical (como un teléfono) o en horizontal (como una tablet)?</li>
+      <li><b>Resolución: </b>¿Cuántos píxeles caben en la pantalla?</li>
+      <li><b>Tipo de medio: </b>¿Se está viendo en una pantalla, se va a imprimir o es un lector de pantalla para personas con discapacidad visual?</li>
+    </ul>
+
+    <h2>Sintaxis</h2>
+    <p>Una media query tiene una estructura básica:</p>
+    <pre>
+      <code class="language-css line-numbers">
+        @media (característica) {
+          /* Estilos CSS */
+        }
+      </code>
+    </pre>
+    <p>Por ejemplo:</p>
+    <pre>
+      <code class="language-css line-numbers">
+        @media (max-width: 768px) {
+          /* Estilos para pantallas de 768px de ancho o menos (móviles y tablets) */
+          body {
+            font-size: 16px;
+          }
+        }
+      </code>
+    </pre>
+
+    <h3>Tipos de media queries</h3>
+    <p>Existen diferentes tipos de media queries que te permiten especificar el tipo de medio al que se aplicarán los estilos:</p>
+    <ul>
+      <li><i>all</i>: Se aplica a todos los medios.</li>
+      <li><i>screen</i>: Se aplica a pantallas de ordenador, tablets y móviles.</li>
+      <li><i>print</i>: Se aplica a la impresión de la página web.</li>
+      <li><i>tv</i>: Se aplica a televisores.</li>
+      <li><i>projection</i>: Se aplica a proyectores.</li>
+      <li><i>handheld</i>: Se aplica a dispositivos portátiles como PDAs.</li>
+      <li><i>aural</i>: Se aplica a lectores de pantalla.</li>
+    </ul>
+
+    <h4> Son una herramienta esencial para el diseño web responsive. Permiten crear páginas web que se adaptan a cualquier dispositivo, ofreciendo la mejor experiencia de usuario posible.</h4>
+
+  </section>
+   
+
+   <script src="script.js"></script>
+
+</body>
+</html>

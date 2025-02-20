@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script language="javascript">
+  var titletext="B I T A C O R A # 1"
+  var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+  set=setTimeout;
+  var index=0;
+  function scrolltitle(){
+  if(index<=titletext.length){
+  document.title=titletext.substring(0,index);
+  index++;
+  set('scrolltitle()', 200);
+  }else{
+  index=0;
+  if(repeat)set('scrolltitle()',1000);
+  }}
+  window.onload=function(){
+  if(!document.layers)set('scrolltitle()',1000);
+  }
+
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cuadro">
+    <img class="imgg" src="m/c/4.png" alt="Eventos">
+    <h1>Eventos de Javascript</h1>
+    <p>Los eventos son acciones o sucesos que ocurren en el navegador, como por ejemplo:</p>
+
+    <ul>
+      <li>El usuario hace clic en un botón.</li>
+      <li>El usuario mueve el ratón sobre un elemento.</li>
+      <li>La página web termina de cargar.</li>
+      <li>Se envía un formulario.</li>
+      <li>Se pulsa una tecla</li>
+    </ul>
+
+    <h3>¿Por qué son importantes los eventos?</h3>
+    <p>Los eventos son fundamentales para crear páginas web interactivas y dinámicas. Permiten que el código JavaScript responda a las acciones del usuario y a otros sucesos que ocurren en el navegador.</p>
+
+    <h3>¿Cómo se utilizan los eventos?</h3>
+    <P>Para utilizar eventos en JavaScript, se siguen estos pasos:</P>
+    <ol>
+      <li><b>Seleccionar el elemento HTML:</b> Se identifica el elemento HTML al que se va a asociar el evento (por ejemplo, un botón, un enlace, un párrafo, etc.).</li>
+      <li><b>Definir el tipo de evento:</b> Se especifica el tipo de evento que se va a escuchar (por ejemplo, click, mouseover, load, submit, keyup, etc.).</li>
+      <li><b>Asociar una función (manejador de eventos):</b> Se define una función JavaScript que se ejecutará cuando ocurra el evento. Esta función se conoce como "manejador de eventos" o "listener".</li>
+    </ol>
+
+    <h2>Formas de asociar eventos</h2>
+    <p>Existen dos formas principales de asociar eventos a elementos HTML:</p>
+
+    <h3>Atributos HTML</h3>
+    <p> Se puede utilizar atributos HTML como onclick, onmouseover, onload, etc., para especificar el código JavaScript que se ejecutará cuando ocurra el evento.</p>
+    <pre>
+      <code class="language-html line-numbers">
+        &lt;button onclick="miFuncion()"&gt;Haz clic aquí&lt;/button&gt;
+      </code>
+    </pre>
+
+    <h3>Métodos JavaScript</h3>
+    <p>Se pueden utilizar métodos como addEventListener() para asociar eventos de manera más flexible y dinámica.</p>
+    <pre>
+      <code class="language-javascript line-numbers">
+        const boton = document.getElementById("miBoton");
+        boton.addEventListener("click", miFuncion);
+      </code>
+    </pre>
+  
+    <H2>Tipos de eventos comunes</H2>
+    <ul>
+      <li><b>Eventos de ratón: </b>click, dblclick, mouseover, mouseout, mousemove.</li>
+      <li><b>Eventos de teclado: </b>keydown, keyup, keypress.</li>
+      <li><b>Eventos de formulario: </b>submit, change, focus, blur.</li>
+      <li><b>Eventos de página: </b>load, unload, resize, scroll.</li>
+
+    </ul>
+
+  </section>
+
+   <script src="script.js"></script>
+
+</body>
+</html>
