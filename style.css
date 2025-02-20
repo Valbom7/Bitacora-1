@@ -348,3 +348,77 @@ code {
 
   }
 }
+
+/* Ajustes generales para responsividad */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Asegurar que las imágenes sean responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajuste de la tipografía para mejorar la legibilidad en móviles */
+body {
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+/* Mejorar la navegación en móviles */
+nav {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Ocultar el menú fuera de la pantalla */
+  width: 70%; /* Reducir el ancho del menú en móviles */
+  height: 100%;
+  background: #eedfdf;
+  transition: left 0.3s ease-in-out;
+}
+
+nav.open {
+  left: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+nav li {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Botón de menú para móviles */
+.boton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 767px) {
+  body {
+    font-size: 1em;
+  }
+  
+  .imgg {
+    width: 95%;
+    margin: auto;
+  }
+  
+  main {
+    margin-left: 0;
+  }
+  
+  header img {
+    margin-left: 0;
+    width: 80%;
+  }
+}
