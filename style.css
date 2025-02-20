@@ -405,7 +405,7 @@ nav li {
 /* Ajustes específicos para móviles */
 @media (max-width: 767px) {
   body {
-    font-size: 1em;
+    font-size: larger;
   }
   
   .imgg {
